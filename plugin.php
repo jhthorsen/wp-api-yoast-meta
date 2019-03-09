@@ -51,6 +51,9 @@ class WPAPIYoastMeta {
       'og_desc'   => get_post_meta($post['id'], '_yoast_wpseo_opengraph-description', true),
       'og_image'  => get_post_meta($post['id'], '_yoast_wpseo_opengraph-image',       true),
       'og_title'  => get_post_meta($post['id'], '_yoast_wpseo_opengraph-title',       true),
+      'tw_desc'   => get_post_meta($post['id'], '_yoast_wpseo_twitter-description',   true),
+      'tw_image'  => get_post_meta($post['id'], '_yoast_wpseo_twitter-image',         true),
+      'tw_title'  => get_post_meta($post['id'], '_yoast_wpseo_opengraph-title',       true),
       'redirect'  => get_post_meta($post['id'], '_yoast_wpseo_redirect',              true),
       'title'     => get_post_meta($post['id'], '_yoast_wpseo_title',                 true),
     );
