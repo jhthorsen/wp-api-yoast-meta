@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPAPIYoastMeta
+ * Plugin Name: Yoast API meta data
  * Version:     0.0.2
  * Description: Adds Yoast fields to WP REST API responses
  * Author:      Jan Henning Thorsen

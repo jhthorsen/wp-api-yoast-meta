@@ -1,4 +1,4 @@
-# WPAPIYoastMeta
+# Yoast API meta data
 
 * Contributors: Jan Henning Thorsen
 * Tags: yoast, wp-api, rest, seo
