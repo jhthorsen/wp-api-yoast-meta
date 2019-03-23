@@ -23,14 +23,22 @@ Example:
   "id": "..."
   ...
   "yoast": {
-    "canonical" => "…",
-    "nofollow"  => "…",
-    "noindex"   => "…",
-    "og_desc"   => "…",
-    "og_image"  => "…",
-    "og_title"  => "…",
-    "redirect"  => "…",
-    "title"     => "…"
+    "canonical"             => "...",
+    "meta_robots_nofollow"  => "...",
+    "meta_robots_noindex"   => "...",
+    "metadesc"              => "...",
+    "opengraph_description" => "...",
+    "opengraph_image"       => "...",
+    "opengraph_image_id"    => "...",
+    "opengraph_title"       => "...",
+    "primary_category"      => "...",
+    "redirect"              => "...",
+    "score"                 => "...",
+    "title"                 => "...",
+    "twitter_description"   => "...",
+    "twitter_image"         => "...",
+    "twitter_image_id"      => "...",
+    "twitter_title"         => "...",
   }
 }
 ```
@@ -41,9 +49,3 @@ Download the plugin from https://github.com/jhthorsen/wp-api-yoast-meta/archive/
 and upload it to your wordpress.
 
 Activate the plugin through the 'Plugins' screen in WordPress
-
-## Changelog
-
-### 0.0.1
-
-Initial release.

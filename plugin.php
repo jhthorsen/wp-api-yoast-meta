@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WPAPIYoastMeta
- * Version:     0.0.1
+ * Version:     0.0.2
  * Description: Adds Yoast fields to WP REST API responses
  * Author:      Jan Henning Thorsen
  * Author URI:  https://braves.global

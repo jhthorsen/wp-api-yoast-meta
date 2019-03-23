@@ -41,6 +41,12 @@ Activate the plugin through the 'Plugins' screen in WordPress
 
 == Changelog ==
 
+= 0.0.2 =
+
+Changed the format of the keys.
+
+Add support for `WP_API_YOAST_POST_TYPES`.
+
 = 0.0.1 =
 
 Initial release.
