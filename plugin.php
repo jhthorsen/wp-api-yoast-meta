@@ -27,7 +27,8 @@ foreach (WP_API_YOAST_POST_TYPES as $type) {
         'primary_category'      => get_post_meta($post['id'], '_yoast_wpseo_primary_category', true),
         'redirect'              => get_post_meta($post['id'], '_yoast_wpseo_redirect', true),
         'score'                 => get_post_meta($post['id'], '_yoast_wpseo_content_score', true),
-        'title'                 => get_post_meta($post['id'], '_yoast_wpseo_title', true),
+		// 'title'                 => get_post_meta($post['id'], '_yoast_wpseo_title', true),
+		'title' => yoastVariableToTitle($post['id']),
         'twitter_description'   => get_post_meta($post['id'], '_yoast_wpseo_twitter-description', true),
         'twitter_image'         => get_post_meta($post['id'], '_yoast_wpseo_twitter-image', true),
         'twitter_image_id'      => get_post_meta($post['id'], '_yoast_wpseo_twitter-image-id', true),
@@ -36,3 +37,25 @@ foreach (WP_API_YOAST_POST_TYPES as $type) {
     },
   ));
 }
+
+function yoastVariableToTitle( $post_id ) {
+    $yoast_title = get_post_meta( $post_id, '_yoast_wpseo_title', true );
+    $title       = strstr( $yoast_title, '%%', true );
+    if ( empty( $title ) ) {
+        $title = get_the_title( $post_id );
+    }
+    $wpseo_titles = get_option( 'wpseo_titles' );
+
+    $sep_options = WPSEO_Option_Titles::get_instance()->get_separator_options();
+    if ( isset( $wpseo_titles['separator'] ) && isset( $sep_options[ $wpseo_titles['separator'] ] ) ) {
+        $sep = $sep_options[ $wpseo_titles['separator'] ];
+    } else {
+        $sep = '-'; //setting default separator if Admin didn't set it from backed
+    }
+
+    $site_title = get_bloginfo( 'name' );
+
+    $meta_title = $title . ' ' . $sep . ' ' . $site_title;
+
+    return $meta_title;
+} 
